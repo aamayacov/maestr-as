@@ -341,28 +341,30 @@ section{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:28px;
+  align-items:start;
 }
 
 .card{
-  background:white;
-  border-radius:30px;
-  padding:38px;
-  border:1px solid var(--border);
+  background:transparent;
+  border-radius:0;
+  padding:0;
+  border:none;
   transition:.35s ease;
-  box-shadow:0 10px 35px rgba(91,33,182,.04);
+  box-shadow:none;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 50px rgba(91,33,182,.1);
+  transform:translateY(-4px);
 }
 
 .card-icon{
-  width:64px;
-  height:64px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#7C3AED,#A855F7);
-  margin-bottom:24px;
+  width:74px;
+  height:74px;
+  border-radius:24px;
+  background:rgba(168,85,247,.12);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(168,85,247,.18);
+  margin-bottom:28px;
 }
 
 .card h3{
@@ -385,11 +387,12 @@ section{
 }
 
 .split-panel{
-  background:white;
-  border-radius:36px;
-  padding:50px;
-  border:1px solid var(--border);
-  box-shadow:0 12px 40px rgba(91,33,182,.05);
+  background:rgba(255,255,255,.55);
+  border-radius:40px;
+  padding:60px;
+  border:1px solid rgba(255,255,255,.6);
+  backdrop-filter:blur(22px);
+  box-shadow:0 25px 60px rgba(91,33,182,.06);
 }
 
 .split-panel h3{
@@ -456,12 +459,13 @@ section{
 }
 
 .timeline-item{
-  background:white;
-  border-radius:34px;
-  padding:42px;
-  border:1px solid var(--border);
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(20px);
+  border-radius:42px;
+  padding:52px;
+  border:1px solid rgba(255,255,255,.7);
   border-left:8px solid var(--accent);
-  box-shadow:0 10px 35px rgba(91,33,182,.04);
+  box-shadow:0 18px 45px rgba(91,33,182,.05);
 }
 
 .timeline-item span{
@@ -492,11 +496,12 @@ section{
 }
 
 .testimonial{
-  background:white;
-  border-radius:34px;
-  padding:42px;
-  border:1px solid var(--border);
-  box-shadow:0 12px 35px rgba(91,33,182,.05);
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(22px);
+  border-radius:40px;
+  padding:48px;
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:0 18px 45px rgba(91,33,182,.06);
 }
 
 .quote{
@@ -842,6 +847,54 @@ footer{
 
 <section id="vision">
 
+  <div class="container" style="margin-bottom:90px;">
+
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;">
+
+      <div>
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:720px;object-fit:cover;border-radius:42px;box-shadow:0 35px 80px rgba(91,33,182,.12);">
+
+      </div>
+
+      <div>
+
+        <span class="section-tag">Experiencia ejecutiva</span>
+
+        <h2 class="section-title">
+          Diseñada para profesionistas que buscan evolucionar.
+        </h2>
+
+        <p class="section-description" style="margin-bottom:34px;">
+          El programa integra innovación, liderazgo y visión empresarial para impulsar crecimiento profesional en un entorno tecnológico altamente competitivo.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:22px;">
+
+          <div style="display:flex;gap:18px;align-items:flex-start;">
+            <div class="card-icon"></div>
+            <div>
+              <h3 style="margin-bottom:8px;color:var(--primary-dark);">Networking ejecutivo</h3>
+              <p style="color:var(--muted);line-height:1.8;">Conecta con profesionistas, líderes y especialistas del ecosistema tecnológico.</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:18px;align-items:flex-start;">
+            <div class="card-icon"></div>
+            <div>
+              <h3 style="margin-bottom:8px;color:var(--primary-dark);">Transformación profesional</h3>
+              <p style="color:var(--muted);line-height:1.8;">Desarrolla capacidades estratégicas para dirigir innovación y proyectos digitales.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
   <div class="container">
 
     <div class="section-header">
@@ -1145,6 +1198,100 @@ footer{
 
 </section>
 
+<section id="resultados-transformacion">
+
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">Transformación profesional</span>
+      <h2 class="section-title">
+        Más que conocimientos: evolución profesional estratégica.
+      </h2>
+
+      <p class="section-description">
+        El objetivo del programa es impulsar liderazgo, especialización y posicionamiento profesional en contextos de innovación tecnológica.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+
+      <div>
+
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:620px;object-fit:cover;border-radius:42px;box-shadow:0 35px 80px rgba(91,33,182,.12);">
+
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:42px;">
+
+        <div>
+          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Liderazgo tecnológico</h3>
+          <p style="color:var(--muted);line-height:1.9;">Desarrolla capacidades para dirigir equipos, proyectos y estrategias digitales.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Especialización competitiva</h3>
+          <p style="color:var(--muted);line-height:1.9;">Integra innovación, tecnología y visión empresarial para diferenciar tu perfil.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Networking ejecutivo</h3>
+          <p style="color:var(--muted);line-height:1.9;">Construye conexiones con profesionistas y líderes del sector tecnológico.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="resultados-transformacion">
+
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">Transformación profesional</span>
+      <h2 class="section-title">
+        Más que conocimientos: evolución profesional estratégica.
+      </h2>
+
+      <p class="section-description">
+        El objetivo del programa es impulsar liderazgo, especialización y posicionamiento profesional en contextos de innovación tecnológica.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:620px;object-fit:cover;border-radius:42px;box-shadow:0 35px 80px rgba(91,33,182,.12);">
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:42px;">
+
+        <div>
+          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Liderazgo tecnológico</h3>
+          <p style="color:var(--muted);line-height:1.9;">Desarrolla capacidades para dirigir equipos, proyectos y estrategias digitales.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Especialización competitiva</h3>
+          <p style="color:var(--muted);line-height:1.9;">Integra innovación, tecnología y visión empresarial para diferenciar tu perfil.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Networking ejecutivo</h3>
+          <p style="color:var(--muted);line-height:1.9;">Construye conexiones con profesionistas y líderes del sector tecnológico.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="dark-section" id="empleabilidad">
 
   <div class="container">
@@ -1156,7 +1303,7 @@ footer{
       </h2>
 
       <p class="section-description">
-        El programa prepara perfiles capaces de ocupar posiciones estratégicas dentro del ecosistema tecnológico y empresarial.
+        Explora algunas de las posiciones y áreas donde podrás aplicar tus competencias estratégicas y tecnológicas.
       </p>
     </div>
 
@@ -1304,6 +1451,94 @@ footer{
 
         </div>
 
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="modalidades">
+
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">Modalidades</span>
+      <h2 class="section-title">
+        Diseñada para integrarse a tu ritmo profesional.
+      </h2>
+
+      <p class="section-description">
+        Las maestrías modernas deben adaptarse a profesionistas activos, equilibrando crecimiento profesional y flexibilidad.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+
+      <div class="split-panel">
+        <h3>Presencial</h3>
+        <p style="color:var(--muted);line-height:1.9;">
+          Potencia networking, colaboración y experiencias ejecutivas inmersivas.
+        </p>
+      </div>
+
+      <div class="split-panel">
+        <h3>Ejecutiva</h3>
+        <p style="color:var(--muted);line-height:1.9;">
+          Compatible con profesionistas que requieren flexibilidad y continuidad laboral.
+        </p>
+      </div>
+
+      <div class="split-panel">
+        <h3>Híbrida</h3>
+        <p style="color:var(--muted);line-height:1.9;">
+          Combina experiencias presenciales y digitales para optimizar tiempo y aprendizaje.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="modalidades">
+
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">Modalidades</span>
+      <h2 class="section-title">
+        Diseñada para integrarse a tu ritmo profesional.
+      </h2>
+
+      <p class="section-description">
+        Las maestrías modernas deben adaptarse a profesionistas activos, equilibrando crecimiento profesional y flexibilidad.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+
+      <div class="split-panel">
+        <h3>Presencial</h3>
+        <p style="color:var(--muted);line-height:1.9;">
+          Potencia networking, colaboración y experiencias ejecutivas inmersivas.
+        </p>
+      </div>
+
+      <div class="split-panel">
+        <h3>Ejecutiva</h3>
+        <p style="color:var(--muted);line-height:1.9;">
+          Compatible con profesionistas que requieren flexibilidad y continuidad laboral.
+        </p>
+      </div>
+
+      <div class="split-panel">
+        <h3>Híbrida</h3>
+        <p style="color:var(--muted);line-height:1.9;">
+          Combina experiencias presenciales y digitales para optimizar tiempo y aprendizaje.
+        </p>
       </div>
 
     </div>
