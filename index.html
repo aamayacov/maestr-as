@@ -341,7 +341,6 @@ section{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:28px;
-  align-items:start;
 }
 
 .card{
@@ -354,7 +353,8 @@ section{
 }
 
 .card:hover{
-  transform:translateY(-4px);
+  transform:translateY(-8px);
+  box-shadow:0 25px 50px rgba(91,33,182,.1);
 }
 
 .card-icon{
@@ -459,13 +459,12 @@ section{
 }
 
 .timeline-item{
-  background:rgba(255,255,255,.7);
-  backdrop-filter:blur(20px);
-  border-radius:42px;
-  padding:52px;
-  border:1px solid rgba(255,255,255,.7);
+  background:white;
+  border-radius:34px;
+  padding:42px;
+  border:1px solid var(--border);
   border-left:8px solid var(--accent);
-  box-shadow:0 18px 45px rgba(91,33,182,.05);
+  box-shadow:0 10px 35px rgba(91,33,182,.04);
 }
 
 .timeline-item span{
@@ -703,140 +702,104 @@ footer{
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero" style="min-height:100vh;position:relative;overflow:hidden;background:#1E0B45;display:flex;align-items:center;">
 
-  <div class="container hero-grid">
+  <div style="position:absolute;inset:0;overflow:hidden;">
 
-    <div>
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2200&auto=format&fit=crop"
+    style="width:100%;height:100%;object-fit:cover;opacity:.22;filter:saturate(1.05) contrast(1.05);">
 
-      <div class="hero-badge">
-        Maestría Presencial • RVOE Oficial • Liderazgo Tecnológico
-      </div>
-
-      <h1>
-        Lidera la evolución digital de las organizaciones.
-      </h1>
-
-      <p>
-        La Maestría en Administración de Tecnologías de la Información de UVP forma especialistas capaces de integrar innovación, estrategia y tecnología para dirigir proyectos digitales, optimizar procesos y construir soluciones empresariales de alto impacto.
-      </p>
-
-      <div class="hero-cta">
-
-        <a href="#admisiones" class="btn-primary">
-          Solicitar información
-        </a>
-
-        <a href="#plan" class="btn-secondary">
-          Explorar plan académico
-        </a>
-
-        <a href="#brochure" class="btn-secondary">
-          Descargar brochure
-        </a>
-
-      </div>
-
-      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;">
-
-        <div style="background:rgba(255,255,255,.08);padding:12px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.08);font-size:.9rem;">
-          +92% satisfacción estudiantil
-        </div>
-
-        <div style="background:rgba(255,255,255,.08);padding:12px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.08);font-size:.9rem;">
-          Networking ejecutivo
-        </div>
-
-        <div style="background:rgba(255,255,255,.08);padding:12px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.08);font-size:.9rem;">
-          Enfoque aplicado
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="hero-side">
-
-      <div class="glass-card">
-
-        <div class="glass-title">
-          Información clave
-        </div>
-
-        <div class="quick-grid">
-
-          <div class="quick-card">
-            <span>Duración</span>
-            <strong>4 semestres</strong>
-          </div>
-
-          <div class="quick-card">
-            <span>Modalidad</span>
-            <strong>Presencial</strong>
-          </div>
-
-          <div class="quick-card">
-            <span>Enfoque</span>
-            <strong>Transformación digital</strong>
-          </div>
-
-          <div class="quick-card">
-            <span>Perfil</span>
-            <strong>Ejecutivo / TI</strong>
-          </div>
-
-          <div class="quick-card">
-            <span>Inicio</span>
-            <strong>Agosto 2026</strong>
-          </div>
-
-          <div class="quick-card">
-            <span>RVOE</span>
-            <strong>20221647</strong>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(23,8,54,.94) 0%,rgba(76,29,149,.88) 55%,rgba(124,58,237,.75) 100%);"></div>
 
   </div>
 
-</section>
+  <div class="container" style="position:relative;z-index:2;">
 
-<section class="floating-stats">
+    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:center;">
 
-  <div class="container">
+      <div>
 
-    <div class="stats-grid">
+        <div style="display:inline-flex;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);font-size:.88rem;margin-bottom:34px;color:white;">
+          Maestría Presencial • RVOE Oficial • Liderazgo Tecnológico
+        </div>
 
-      <div class="stat-card">
-        <h3>+80%</h3>
-        <p>
-          de las empresas están acelerando procesos de transformación digital.
+        <h1 style="font-size:clamp(4rem,7vw,7rem);line-height:.92;font-weight:800;letter-spacing:-.06em;color:white;max-width:760px;margin-bottom:34px;">
+          Lidera la evolución digital de las organizaciones.
+        </h1>
+
+        <p style="font-size:1.2rem;line-height:1.9;color:rgba(255,255,255,.82);max-width:720px;margin-bottom:42px;">
+          La Maestría en Administración de Tecnologías de la Información de UVP forma especialistas capaces de integrar innovación, estrategia y tecnología para dirigir proyectos digitales y construir soluciones empresariales de alto impacto.
         </p>
+
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:34px;">
+
+          <a href="#admisiones" class="btn-primary">
+            Solicitar información
+          </a>
+
+          <a href="#plan" class="btn-secondary" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:white;backdrop-filter:blur(18px);">
+            Explorar plan académico
+          </a>
+
+        </div>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+
+          <div style="padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(18px);font-size:.92rem;color:white;">
+            +92% satisfacción estudiantil
+          </div>
+
+          <div style="padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(18px);font-size:.92rem;color:white;">
+            Networking ejecutivo
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="stat-card">
-        <h3>Top Skills</h3>
-        <p>
-          Liderazgo TI, IA, seguridad, automatización e innovación empresarial.
-        </p>
-      </div>
+      <div style="position:relative;">
 
-      <div class="stat-card">
-        <h3>Networking</h3>
-        <p>
-          Conecta con profesionistas y líderes del ecosistema tecnológico.
-        </p>
-      </div>
+        <div style="position:relative;height:760px;border-radius:42px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.35);">
 
-      <div class="stat-card">
-        <h3>ROI</h3>
-        <p>
-          Especialización diseñada para crecimiento profesional y liderazgo.
-        </p>
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1800&auto=format&fit=crop"
+          style="width:100%;height:100%;object-fit:cover;">
+
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,5,35,.75),transparent 55%);"></div>
+
+        </div>
+
+        <div style="position:absolute;bottom:34px;left:-40px;width:320px;background:rgba(255,255,255,.12);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:28px;color:white;box-shadow:0 25px 60px rgba(0,0,0,.2);">
+
+          <span style="font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;opacity:.72;display:block;margin-bottom:16px;">
+            Información clave
+          </span>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+
+            <div>
+              <small style="opacity:.65;display:block;margin-bottom:6px;">Duración</small>
+              <strong>4 semestres</strong>
+            </div>
+
+            <div>
+              <small style="opacity:.65;display:block;margin-bottom:6px;">Modalidad</small>
+              <strong>Presencial</strong>
+            </div>
+
+            <div>
+              <small style="opacity:.65;display:block;margin-bottom:6px;">Perfil</small>
+              <strong>Ejecutivo / TI</strong>
+            </div>
+
+            <div>
+              <small style="opacity:.65;display:block;margin-bottom:6px;">Enfoque</small>
+              <strong>Transformación digital</strong>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -846,54 +809,6 @@ footer{
 </section>
 
 <section id="vision">
-
-  <div class="container" style="margin-bottom:90px;">
-
-    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;">
-
-      <div>
-
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:720px;object-fit:cover;border-radius:42px;box-shadow:0 35px 80px rgba(91,33,182,.12);">
-
-      </div>
-
-      <div>
-
-        <span class="section-tag">Experiencia ejecutiva</span>
-
-        <h2 class="section-title">
-          Diseñada para profesionistas que buscan evolucionar.
-        </h2>
-
-        <p class="section-description" style="margin-bottom:34px;">
-          El programa integra innovación, liderazgo y visión empresarial para impulsar crecimiento profesional en un entorno tecnológico altamente competitivo.
-        </p>
-
-        <div style="display:flex;flex-direction:column;gap:22px;">
-
-          <div style="display:flex;gap:18px;align-items:flex-start;">
-            <div class="card-icon"></div>
-            <div>
-              <h3 style="margin-bottom:8px;color:var(--primary-dark);">Networking ejecutivo</h3>
-              <p style="color:var(--muted);line-height:1.8;">Conecta con profesionistas, líderes y especialistas del ecosistema tecnológico.</p>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:18px;align-items:flex-start;">
-            <div class="card-icon"></div>
-            <div>
-              <h3 style="margin-bottom:8px;color:var(--primary-dark);">Transformación profesional</h3>
-              <p style="color:var(--muted);line-height:1.8;">Desarrolla capacidades estratégicas para dirigir innovación y proyectos digitales.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
   <div class="container">
 
@@ -1088,154 +1003,60 @@ footer{
 
 </section>
 
-<section id="plan">
+<section id="plan" style="padding:160px 0;background:#F5F1FB;position:relative;overflow:hidden;">
 
   <div class="container">
 
-    <div class="section-header">
+    <div style="max-width:980px;margin-bottom:90px;">
+
       <span class="section-tag">Plan académico</span>
-      <h2 class="section-title">
+
+      <h2 class="section-title" style="font-size:clamp(3rem,5vw,5.6rem);line-height:.95;letter-spacing:-.06em;">
         Un recorrido diseñado para construir liderazgo digital.
       </h2>
 
-      <p class="section-description">
+      <p class="section-description" style="font-size:1.18rem;max-width:760px;line-height:1.9;">
         El programa evoluciona desde fundamentos estratégicos hasta aplicaciones avanzadas de innovación, inteligencia artificial y gobernanza tecnológica.
       </p>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <span>Bloque 01</span>
-        <h3>Fundamentos estratégicos</h3>
-        <p>
-          Programación orientada a objetos, ingeniería de software y gestión TI.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <span>Bloque 02</span>
-        <h3>Infraestructura e innovación</h3>
-        <p>
-          Redes, sistemas operativos, interfaces móviles e innovación tecnológica.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <span>Bloque 03</span>
-        <h3>Datos y seguridad</h3>
-        <p>
-          Bases distribuidas, inteligencia artificial y seguridad web.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <span>Bloque 04</span>
-        <h3>Gobernanza y dirección</h3>
-        <p>
-          Aplicaciones distribuidas, gobernanza TI y seminario de investigación.
-        </p>
-      </div>
 
     </div>
 
-  </div>
+    <div style="display:flex;flex-direction:column;gap:90px;position:relative;">
 
-</section>
-
-<section id="ecosistema">
-
-  <div class="container">
-
-    <div class="section-header">
-      <span class="section-tag">Ecosistema profesional</span>
-      <h2 class="section-title">
-        Conecta con una comunidad enfocada en crecimiento, innovación y liderazgo.
-      </h2>
-
-      <p class="section-description">
-        Las maestrías premium no solo entregan conocimiento: construyen redes profesionales, acceso a oportunidades y conexiones estratégicas.
-      </p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="card-icon"></div>
-        <h3>Networking ejecutivo</h3>
-        <p>
-          Relaciónate con profesionistas, especialistas y líderes del ecosistema tecnológico.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"></div>
-        <h3>Proyectos reales</h3>
-        <p>
-          Participa en dinámicas orientadas a retos empresariales y transformación digital.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"></div>
-        <h3>Actualización continua</h3>
-        <p>
-          Accede a tendencias, innovación y herramientas alineadas al mercado actual.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"></div>
-        <h3>Visión estratégica</h3>
-        <p>
-          Integra tecnología y negocio para impulsar organizaciones competitivas.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="resultados-transformacion">
-
-  <div class="container">
-
-    <div class="section-header">
-      <span class="section-tag">Transformación profesional</span>
-      <h2 class="section-title">
-        Más que conocimientos: evolución profesional estratégica.
-      </h2>
-
-      <p class="section-description">
-        El objetivo del programa es impulsar liderazgo, especialización y posicionamiento profesional en contextos de innovación tecnológica.
-      </p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-
-      <div>
-
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:620px;object-fit:cover;border-radius:42px;box-shadow:0 35px 80px rgba(91,33,182,.12);">
-
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:42px;">
+      <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;">
 
         <div>
-          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Liderazgo tecnológico</h3>
-          <p style="color:var(--muted);line-height:1.9;">Desarrolla capacidades para dirigir equipos, proyectos y estrategias digitales.</p>
+          <span class="section-tag">Semestre 01</span>
+          <h3 style="font-size:3rem;line-height:1;letter-spacing:-.05em;color:var(--primary-dark);margin:18px 0 20px;">
+            Construye visión estratégica.
+          </h3>
+          <p style="font-size:1.08rem;color:var(--muted);line-height:1.9;max-width:480px;">
+            Comprende cómo integrar innovación, negocio y tecnología para construir organizaciones competitivas.
+          </p>
         </div>
 
-        <div>
-          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Especialización competitiva</h3>
-          <p style="color:var(--muted);line-height:1.9;">Integra innovación, tecnología y visión empresarial para diferenciar tu perfil.</p>
+        <div style="position:relative;height:420px;border-radius:38px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop"
+          style="width:100%;height:100%;object-fit:cover;">
         </div>
 
-        <div>
-          <h3 style="font-size:2rem;margin-bottom:12px;color:var(--primary-dark);">Networking ejecutivo</h3>
-          <p style="color:var(--muted);line-height:1.9;">Construye conexiones con profesionistas y líderes del sector tecnológico.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;">
+
+        <div style="position:relative;height:420px;border-radius:38px;overflow:hidden;order:1;">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop"
+          style="width:100%;height:100%;object-fit:cover;">
+        </div>
+
+        <div style="order:2;">
+          <span class="section-tag">Semestre 02</span>
+          <h3 style="font-size:3rem;line-height:1;letter-spacing:-.05em;color:var(--primary-dark);margin:18px 0 20px;">
+            Implementa soluciones tecnológicas.
+          </h3>
+          <p style="font-size:1.08rem;color:var(--muted);line-height:1.9;max-width:480px;">
+            Explora innovación digital, inteligencia artificial e infraestructura tecnológica aplicada.
+          </p>
         </div>
 
       </div>
@@ -1413,6 +1234,45 @@ footer{
       </p>
     </div>
 
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;margin-bottom:120px;">
+
+      <div style="position:relative;height:760px;border-radius:42px;overflow:hidden;">
+
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1600&auto=format&fit=crop"
+        style="width:100%;height:100%;object-fit:cover;">
+
+      </div>
+
+      <div>
+
+        <span class="section-tag">Comunidad profesional</span>
+
+        <h2 class="section-title" style="font-size:clamp(3rem,5vw,5rem);line-height:.95;letter-spacing:-.06em;max-width:580px;">
+          Conecta con profesionistas que buscan evolucionar.
+        </h2>
+
+        <p class="section-description" style="max-width:560px;font-size:1.1rem;line-height:1.9;">
+          La experiencia de posgrado no solo ocurre dentro del aula. El networking, las conexiones y el intercambio profesional forman parte central del crecimiento ejecutivo.
+        </p>
+
+        <div style="display:flex;gap:42px;flex-wrap:wrap;margin-top:42px;">
+
+          <div>
+            <strong style="font-size:2.6rem;color:var(--primary-dark);display:block;">850+</strong>
+            <span style="color:var(--muted);">Alumni profesionales</span>
+          </div>
+
+          <div>
+            <strong style="font-size:2.6rem;color:var(--primary-dark);display:block;">40+</strong>
+            <span style="color:var(--muted);">Empresas vinculadas</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
     <div class="testimonial-grid">
 
       <div class="testimonial">
@@ -1464,81 +1324,50 @@ footer{
   <div class="container">
 
     <div class="section-header">
-      <span class="section-tag">Modalidades</span>
+      <span class="section-tag">Modalidades académicas</span>
       <h2 class="section-title">
-        Diseñada para integrarse a tu ritmo profesional.
+        Cada maestría debe adaptarse a distintos estilos de vida profesionales.
       </h2>
 
       <p class="section-description">
-        Las maestrías modernas deben adaptarse a profesionistas activos, equilibrando crecimiento profesional y flexibilidad.
+        La modalidad es uno de los principales factores de decisión en posgrado. La estructura debe permitir comunicar claramente cómo se cursa el programa, el nivel de flexibilidad y el tipo de experiencia académica.
       </p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;">
 
-      <div class="split-panel">
-        <h3>Presencial</h3>
-        <p style="color:var(--muted);line-height:1.9;">
-          Potencia networking, colaboración y experiencias ejecutivas inmersivas.
-        </p>
+      <div>
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:720px;object-fit:cover;border-radius:42px;box-shadow:0 35px 80px rgba(91,33,182,.12);">
+
       </div>
 
-      <div class="split-panel">
-        <h3>Ejecutiva</h3>
-        <p style="color:var(--muted);line-height:1.9;">
-          Compatible con profesionistas que requieren flexibilidad y continuidad laboral.
-        </p>
-      </div>
+      <div style="display:flex;flex-direction:column;gap:26px;">
 
-      <div class="split-panel">
-        <h3>Híbrida</h3>
-        <p style="color:var(--muted);line-height:1.9;">
-          Combina experiencias presenciales y digitales para optimizar tiempo y aprendizaje.
-        </p>
-      </div>
+        <div class="split-panel">
+          <span class="section-tag" style="margin-bottom:12px;display:block;">01</span>
+          <h3>Presencial</h3>
+          <p style="color:var(--muted);line-height:1.9;margin-top:16px;">
+            Experiencia inmersiva enfocada en networking, colaboración, workshops y contacto directo con especialistas.
+          </p>
+        </div>
 
-    </div>
+        <div class="split-panel">
+          <span class="section-tag" style="margin-bottom:12px;display:block;">02</span>
+          <h3>Híbrida</h3>
+          <p style="color:var(--muted);line-height:1.9;margin-top:16px;">
+            Combina sesiones presenciales y digitales para equilibrar flexibilidad, interacción y continuidad profesional.
+          </p>
+        </div>
 
-  </div>
+        <div class="split-panel">
+          <span class="section-tag" style="margin-bottom:12px;display:block;">03</span>
+          <h3>Presencial + Online</h3>
+          <p style="color:var(--muted);line-height:1.9;margin-top:16px;">
+            Modelo diseñado para profesionistas que requieren acceso remoto complementado con experiencias ejecutivas presenciales.
+          </p>
+        </div>
 
-</section>
-
-<section id="modalidades">
-
-  <div class="container">
-
-    <div class="section-header">
-      <span class="section-tag">Modalidades</span>
-      <h2 class="section-title">
-        Diseñada para integrarse a tu ritmo profesional.
-      </h2>
-
-      <p class="section-description">
-        Las maestrías modernas deben adaptarse a profesionistas activos, equilibrando crecimiento profesional y flexibilidad.
-      </p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
-
-      <div class="split-panel">
-        <h3>Presencial</h3>
-        <p style="color:var(--muted);line-height:1.9;">
-          Potencia networking, colaboración y experiencias ejecutivas inmersivas.
-        </p>
-      </div>
-
-      <div class="split-panel">
-        <h3>Ejecutiva</h3>
-        <p style="color:var(--muted);line-height:1.9;">
-          Compatible con profesionistas que requieren flexibilidad y continuidad laboral.
-        </p>
-      </div>
-
-      <div class="split-panel">
-        <h3>Híbrida</h3>
-        <p style="color:var(--muted);line-height:1.9;">
-          Combina experiencias presenciales y digitales para optimizar tiempo y aprendizaje.
-        </p>
       </div>
 
     </div>
